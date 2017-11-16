@@ -1,7 +1,7 @@
 /* Note: These headers were borrowed from the default scalpel configuration file. */
 
 // File Type Headers. Format: {start, end}
-unsigned char *fileTypes[][2] = {
+const unsigned char *fileTypes[][2] = {
 	{"\x4a\x47\x04\x0e", "\xcf\xc7\xcb"}, // ART
 	{"\x47\x49\x46\x38\x37\x61", "\x00\x3b"}, // GIF
 	{"\xff\xd8\xff\xe0\x00\x10", "\xff\xd9"}, // JPG
@@ -24,7 +24,7 @@ unsigned char *fileTypes[][2] = {
 };
 
 // File Type Options. Format: {startLength, endLength, asciiOnly (true/false)}
-unsigned char fileTypeOptions[][3] = {
+const uint8_t fileTypeOptions[][3] = {
 	{4, 3, 0}, // ART
 	{6, 2, 0}, // GIF
 	{6, 2, 0}, // JPG
@@ -46,4 +46,4 @@ unsigned char fileTypeOptions[][3] = {
 	{4, 2, 0}, // ZIP
 };
 
-unsigned int numberOfFileTypes = sizeof(fileTypes)/16;
+const uint16_t numberOfFileTypes = sizeof(fileTypes)/16;
